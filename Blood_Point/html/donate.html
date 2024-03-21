@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloodPoint</title>
+    <link rel="stylesheet" href="./../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      input {
+        box-sizing: border-box;
+        border: 1px solid black;
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="banner" id="donate-banner">
+      <div class="navbar">
+        <img src="./../images/logo.png" class="logo" />
+        <ul>
+          <li><a href="./../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donate.html">Donate blood</a></li>
+          <li><a href="request.html">Request blood</a></li>
+        <li><a href="quantity.php">Quantity</a></li>
+          <li><a href="login.html">Login</a></li>
+
+        </ul>
+      </div>
+      <div class="content" style="top: 40%">
+        <h1>Donor Registration</h1>
+      </div>
+    </div>
+    <form action="../php/donate.php" method="post" id="donate-form">
+      <div class="peronsal-info">
+        <h2 class="title">Personal Information</h2>
+        <div class="form-items">
+          <div class="left">
+            <label for="name" required>Name</label>
+            <input
+              required
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              placeholder="Name"
+            />
+
+            <label for="dob">Date of Birth</label>
+            <input required type="date" name="dob" id="dob" />
+
+            <label for="gender">Gender</label>
+            <select required name="gender" id="gender">
+              <option value="" disabled selected>Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+
+            <label for="email">Email</label>
+            <input
+              required
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="E-mail"
+            />
+          </div>
+
+          <div class="right">
+            <label for="phone">Phone Number</label>
+            <input
+              required
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="mobile"
+              placeholder="Phone Number"
+            />
+
+            <label for="province">Province</label>
+            <select required name="province" id="province">
+              <option value="" disabled selected>
+                select your province
+              </option>
+              <option value="1">Radhangari</option>
+              <option value="2">Karveer</option>
+              <option value="3">Kagal</option>
+              <option value="4">Aajara</option>
+              <option value="5">Bhudargad</option>
+              <option value="6">Panhala</option>
+              <option value="7">Shirol</option>
+              <option value="8">Shahuwadi</option>
+              <option value="9">Hatkangle</option>
+              <option value="10">Chandgad</option>
+              <option value="11">Gadhinglaj</option>
+              <option value="12">Gaganbawada</option>              
+            </select>
+
+            <label for="city">City</label>
+            <select required name="city" id="city" required>
+              <option value="" disabled selected>
+                select your city
+              </option>
+              <option value="Kolhapur">Kolhapur</option>
+            </select>
+
+            <label for="name">Occupation(if any)</label>
+            <input
+              required
+              type="text"
+              id="name"
+              name="occupation"
+              autocomplete="name"
+              placeholder="occupation"
+            />
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div class="medical-info">
+        <h2 class="title">Medical Information</h2>
+        <div class="form-items">
+          <div class="left">
+            <label for="blood-group"> Blood Group </label>
+
+            <select required name="blood-group" id="blood-group">
+              <option value="" disabled selected>
+                select your blood group
+              </option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+
+            <label for="last-donation-date">Last Donation Date</label>
+            <input
+              required
+              type="date"
+              name="last-donation-date"
+              id="last-donation-date"
+            />
+
+            <label for="disease">Any Disease</label>
+            <select required name="disease" id="disease">
+              <option value="" disabled selected>Any Disease</option>
+              <option value="cold">No</option>
+              <option value="cold">cold</option>
+              <option value="Disease 2">fever</option>
+              <option value="Disease 2">other</option>
+            </select>
+          </div>
+
+          <div class="right">
+            <label for="cardiac">Cardiac</label>
+            <select required name="cardiac" id="cardiac">
+              <option value="" disabled selected>Cardiac</option>
+              <option value="Disease 1">Yes</option>
+              <option value="Disease 2">No</option>
+            </select>
+
+            <label for="bleeding-disorder">Allergies</label>
+            <select required name="allergies" id="allergies">
+              <option value="" disabled selected>Allergies</option>
+              <option value="4">Yes</option>
+              <option value="5">No</option>
+              <!-- <option value="6">Province 6</option> -->
+              <!-- <option value="7">Province 7</option> -->
+            </select>
+
+            <label for="bleeding-disorder">Bleeding disorder</label>
+            <select required name="bleeding-disorder" id="bleeding-disorder">
+              <option value="" disabled selected>Bleeding disorder</option>
+              <option value="4">Yes</option>
+              <option value="5">No</option>
+              <!-- <option value="6">Province 6</option> -->
+              <!-- <option value="7">Province 7</option> -->
+            </select>
+          </div>
+        </div>
+
+        <div class="btn">
+          <button type="submit">Submit</button>
+        </div>
+
+      </div>
+    </form>
+
+
+    <footer>
+      <div class="data">
+        <div class="slogan">
+          <span>“Blood Donation Costs You Nothing,</span> But It Can Mean The
+          World To Someone In Need.”
+        </div>
+        <div class="row">
+          <div class="left">
+            <h2><span>HELP SAVE A LIFE</span></h2>
+            <h2>GIVE THE GIFT OF BLOOD</h2>
+            <div class="buttons">
+              <button type="button">
+                <span></span><a href="donate.html">DONATE</a>
+              </button>
+              <button type="button">
+                <span></span><a href="request.html">REQUEST</a>
+              </button>
+            </div>
+            <div class="empty-space"><br /><br /></div>
+          </div>
+          <div class="right">
+            <img src="./../images/blood.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer page -->
+      <div class="details">
+        <div class="left">
+          <!-- <img src="./../images/logo-transparent-png.png" alt="" /> -->
+          <p>
+            BloodPoint is a blood donation site. It is made with the vision to
+            help people in need. To help the patient’s family and worrying about
+            finding the blood, BloodPoint is made.
+          </p>
+        </div>
+        <div class="middle">
+          <h2>Quick Links</h2>
+          <a href="about.html">About</a>
+          <a href="donate.html">Donate</a>
+          <a href="request.html">Request</a>
+        </div>
+        <div class="right">
+          <h2>Quick Links</h2>
+          <div class="name">
+            <i class="fa-solid fa-user"></i> &nbsp; BloodPoint
+          </div>
+          <div class="phone">
+            <i class="fa-solid fa-phone"></i> &nbsp;
+            <a href="tel:7378578114">7378578114</a>
+          </div>
+          <div class="email">
+            <i class="fa-solid fa-envelope"></i> &nbsp;
+            <a href="mailto:contact@BloodPoint.org"
+              >contact@BloodPoint.org</a
+          >
+          </div>
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i> &nbsp;
+            <a
+              href="https://www.google.com/maps/place/Kolhapur"
+              target="_blank"
+              rel="noopener noreferrer"
+              > Shivaji peth, Kolhapur, Maharashtra</a
+            >
+          </div>
+        </div>
+      </div>
+      <hr style="width: 90%; margin: 10px" />
+      <div class="copyright" style="margin: 30px">
+        <p>Copyright &copy; 2023 | BloodPoint | All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
